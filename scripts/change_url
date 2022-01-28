@@ -100,6 +100,7 @@ fi
 #=================================================
 # MODIFY A CONFIG FILE
 #=================================================
+ynh_script_progression --message="Reconfiguring congif file.." --weight=1
 
 sed "s/a APP_URL=.*/a https://${new_domain}${new_path}" $final_path/.env
 
