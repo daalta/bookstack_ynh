@@ -101,6 +101,8 @@ fi
 # MODIFY A CONFIG FILE
 #=================================================
 
+sed "s/a APP_URL=.*/a https://${new_domain}${new_path}" $final_path/.env
+
 pushd $final_path
 	php$phpversion artisan bookstack:update-url https://${domain}${path_url} https://${new_domain}${new_path}
 popd
