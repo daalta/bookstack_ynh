@@ -102,7 +102,7 @@ fi
 #=================================================
 
 pushd $final_path
-	php$phpversion artisan bookstack:update-url https://${domain}${path_url} https://${new_domain}${new_path} --force
+	php$phpversion artisan bookstack:update-url https://${domain}${path_url} https://${new_domain}${new_path}
 popd
 
 #=================================================
